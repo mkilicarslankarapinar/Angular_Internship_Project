@@ -9,12 +9,11 @@ import { Observable } from 'rxjs';
 })
 export class CategoryService {
 
-  apiUrl = "https://localhost:44360/api/Categories/getall"
+  apiUrl = 'https://localhost:44360/api/categories/getall';
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  getCategories():Observable<ListResponseModel<Category>>{
-    return this.httpClient.get<ListResponseModel<Category>>(this.apiUrl)
+  getCategories():Observable<ListResponseModel<Category>> {
+    return this.httpClient.get<ListResponseModel<Category>>(this.apiUrl);
   }
-
 }
